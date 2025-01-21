@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cab Booking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .bg-opacity-low::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            /* Adjust opacity here (0 to 1) */
+            z-index: -1;
+        }
+    </style>
+
+</head>
+
+<body class="relative bg-fixed bg-cover bg-center bg-no-repeat bg-opacity-low"
+    style="background-image: url('bg_svg.jpg'); ">
+
+    <div class="">
+
+        <!-- Header -->
+        <header class="bg-white shadow-lg ">
+            <div
+                class="container max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center p-4 space-y-4 md:space-y-0">
+
+                <!-- Logo and Brand Name -->
+                <div class="flex items-center md:ml-0">
+                    <img src="./undraw_building_burz.svg" alt="Brand Logo" class="h-8">
+                    <span class="ml-3 text-lg font-bold text-gray-800">Rental Cabs</span>
+                </div>
+
+                <!-- Contact Number -->
+                <div class="flex items-center border border-purple rounded-lg overflow-hidden w-xl md:w-auto md:mr-0">
+                    <!-- Icon and 24x7 -->
+                    <div class="flex items-center bg-white px-3 py-2 w-xl md:w-auto">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-purple" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                            <path
+                                d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
+                        </svg>
+                        <span class="ml-2 text-black font-medium">24x7</span>
+
+                    </div>
+
+                    <!-- Contact Number -->
+                    <div class="bg-purple px-4 py-2 text-white font-bold w-full md:w-auto">
+                        <a href="tel:1234567890" class="block text-center md:text-left">
+                            090 4545 0000
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <h1 class="font-bold text-6xl text-center mt-8"
+            style="font-family: Cinzel; color: transparent; background : linear-gradient(to bottom, #736CED, #736CED, white); background-clip: text;">
+            Ride Your Way, Every Day</h1>
+
+        <!-- form section -->
+        <div class="relative container mx-auto mt-8 flex flex-col items-center justify-center md:mx-auto lg:mx-auto">
+            <div class="p-6 rounded-3xl shadow-lg bg-white">
+                <div
+                    class="grid grid-cols-2 items-center border border-purple rounded-lg overflow-hidden max-w-sm mx-auto mb-4">
+                    <button id="oneWay-btn" class="py-2 px-4 cursor-pointer active text-center font-bold">One
+                        Way</button>
+                    <button id="twoWay-btn" class="py-2 px-4 cursor-pointer text-center font-bold">Two Way</button>
+                </div>
+
+                <div id="oneWayForm">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-center justify-center">
+
+                        <div class="mb-4">
+                            <label for="text" class="block text-gray-700 font-bold mb-1"> FROM </label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-b-2 rounded-md relative "
+                                placeholder="Enter Pick Up City">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="text" class="block text-gray-700 font-bold mb-1">TO</label>
+                            <input type="text" id="email" class="w-full px-4 py-2 border rounded-md"
+                                placeholder="Enter Drop City">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="DATE" class="block text-gray-700 font-bold mb-1">PICK UP DATE</label>
+                            <input type="date" id="password" class="w-full text-gray-400 px-4 py-2 border rounded-md"
+                                placeholder="Enter your password">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="TIME" class="block text-gray-700 font-bold mb-1">PICK UP TIME</label>
+                            <input type="time" id="password" class="w-full text-gray-400 px-4 py-2 border rounded-md"
+                                placeholder="Enter your password">
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center justify-center">
+                        <button id="" type="submit"
+                            class="w-auto bg-purple text-white font-bold p-3 rounded-md hover:bg-purple">
+                            Check Availibility
+                        </button>
+                    </div>
+                </div>
+                <div id="twoWayForm" class="hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center justify-center max-w-5xl">
+
+                        <div class="mb-4">
+                            <label for="text" class="block text-gray-700 font-bold mb-1 mx-auto"> FROM </label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-b-2 rounded-md"
+                                placeholder="Enter Pick Up City">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="text" class="block text-gray-700 font-bold mb-1">TO</label>
+                            <input type="text" id="email" class="w-full px-4 py-2 border rounded-md"
+                                placeholder="Enter Drop City">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="DATE" class="block text-gray-700 font-bold mb-1">PICK UP DATE</label>
+                            <input type="date" id="password" class="w-full text-gray-400 px-4 py-2 border rounded-md"
+                                placeholder="Enter your password">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="DATE" class="block text-gray-700 font-bold mb-1">DROP DATE</label>
+                            <input type="date" id="password" class="w-full text-gray-400 px-4 py-2 border rounded-md"
+                                placeholder="Enter your password">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="TIME" class="block text-gray-700 font-bold mb-1">PICK UP TIME</label>
+                            <input type="time" id="password" class="w-full px-4 py-2 border rounded-md"
+                                placeholder="Enter your password">
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center justify-center">
+                        <button type="submit"
+                            class="w-auto bg-purple text-white font-bold p-3 rounded-md hover:bg-purple">
+                            Check Availibility
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Why us section  -->
+        <section>
+            <div
+                class="container max-w-6xl mx-auto mt-12 flex flex-col text-center items-center justify-center md:mx-auto lg:mx-auto mb-4">
+                <h1 class="text-3xl text-center font-bold text-center text-purple mb-4">WHY TO CHOOSE US ?</h1>
+
+                <div
+                    class="max-w-6xl flex-flow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 max-w-6xl">
+                    <div
+                        class="text-white text-center p-6 rounded-lg shadow-md bg-white border flex flex-col justify-center items-center">
+                        <img src="undraw_order-ride_4gaq.svg" class="w-20 h-20 mb-2" alt="">
+                        <p class="text-black font-bold">Clean & Hyginic Cars</p>
+                    </div>
+
+
+                    <div
+                        class="text-white text-center p-6 rounded-lg shadow-md bg-white border flex flex-col justify-center items-center">
+                        <img src="undraw_receipt_tzi0.svg" class="w-20 h-20 mb-2" alt="">
+                        <p class="text-black font-bold">Tensparent Billing</p>
+                    </div>
+
+                    <div
+                        class="text-white text-center p-6 rounded-lg shadow-md bg-white border flex flex-col justify-center items-center">
+                        <img src="undraw_certification_i2m0.svg" class="w-20 h-20 mb-2" alt="">
+                        <p class="text-black font-bold">Expert Chauffeurs</p>
+                    </div>
+
+                    <div
+                        class="text-white text-center p-6 rounded-lg shadow-md bg-white border flex flex-col justify-center items-center">
+                        <img src="undraw_world_bdnk.svg" class="w-20 h-20 mb-2" alt="">
+                        <p class="text-black font-bold">500+ Cities</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- service section -->
+        <section>
+            <h1 class="text-3xl text-center font-bold text-center text-purple mb-4">OUR SERVICES</h1>
+
+            <div class=" flex justify-center items-center mb-4">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-4 max-w-6xl">
+
+                    <div class="bg-white text-white text-center p-6 rounded-lg shadow-md border">
+                        <div class="p-5 flex flex-col items-center justify-center">
+                            <img src="undraw_destination_fkst.svg"
+                                class="w-[150px] h-[150px] flex justify-center items-center" alt="">
+
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">ONE WAY
+                                DROPS
+                            </h5>
+
+                            <p class="mb-0 font-normal text-gray-700 dark:text-gray-400">Book a one-way cab and travel
+                                with
+                                peace of mind. Our reliable drivers will get you to your destination safely and
+                                efficiently,
+                                Simply book your ride and enjoy a comfortable and reliable journey to your destination.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-4 p-4 max-w-screen-lg items-center justify-center">
+                            <div class="flex flex-col items-center justify-center">
+                                <img src="Component 1 (1).svg" class="w-10 h-10 mb-4" alt="">
+                                <p class="text-black font-medium">Safety Certified</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <img src="undraw_savings_uwjn.svg" class="w-14 h-14" alt="">
+                                <p class="text-black font-medium">Lowest Price</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <img src="undraw_pic-profile_nr49.svg" class="w-10 h-10 mb-4" alt="">
+                                <p class="text-black font-medium">Expert Drivers</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white text-white text-center p-6 rounded-lg shadow-md border">
+
+                        <div class="p-5 flex flex-col items-center justify-center">
+                            <img src="undraw_travelers_vttm.svg" class="w-[150px] h-[150px] " alt="">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">ROUND-TRIP
+                                CABS
+                            </h5>
+                            <p class=" font-normal text-gray-700 dark:text-gray-400">Embark on a worry-free journey with
+                                our two-way cab service. Enjoy the convenience of pre-booking your return trip, ensuring
+                                a
+                                seamless and stress-free travel experience.</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-4 p-4 max-w-screen-lg items-center justify-center">
+                            <div class="flex flex-col items-center justify-center">
+                                <img src="undraw_savings_uwjn.svg" class="w-14 h-14" alt="">
+                                <p class="text-black font-medium">Affordable Price</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <img src="Component 1 (1).svg" class="w-10 h-10 mb-4" alt="">
+                                <p class="text-black font-medium">Safety Certified</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <img src="undraw_pic-profile_nr49.svg" class="w-10 h-10 mb-4" alt="">
+                                <p class="text-black font-medium">Expert Drivers</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- content section -->
+        <section>
+            <div class="bg-white flex justify-center items-center">
+                <div class="bg-white text-white text-center p-6 rounded-lg">
+
+                    <div class="p-5 flex flex-col items-center justify-between flex-flow grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 max-w-6xl">
+
+                        <div>
+                            <h1 class="text-3xl font-bold text-purple mb-4">Best Inter-City & Local Cab Service</h1>
+                            <p class="mb-2 mr-6 font-normal text-black text-justify">We are <span class="font-bold"> Rental Cars,</span> an online cab booking aggregator, providing customers with reliable and premium Intercity and Local car rental services. We are uniquely placed as the best & expert driven car rental company in India in terms of geographical reach and services.
+                            </p>
+                        </div>
+                        <img src="leather-car-interior.jpg" class="h-auto w-auto object-contain rounded-3xl" alt="">
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="bg-white flex justify-center items-center">
+                <div class="bg-white text-white text-center p-6 rounded-lg">
+
+                    <div class="p-5 flex flex-col items-center justify-between flex-flow max-w-6xl">
+                        
+                        <div>
+                            <h1 class="text-3xl font-bold text-purple mb-4">Exploring India, one road trip at a time</h1>
+                            <p class="mb-0 font-normal text-black text-justify">
+                                To us, a road trip is one of the most exhilarating ways to travel the length and breadth of India. There's always something to look at, something to explore and to experience. Because we love travelling by road so much, we've been striving to make sure you have a great experience too. We wanted more of you to go on a road trip, and more of you to experience the same joys of travel that we do. Instead of driving, why not sit back and take our chauffeur driven cabs on your next vacation? We believe that the time you spend on your vacation should be entirely yours. So now, we are in <span class="text-purple font-bold">2000+ cities across India</span> - to help you travel to wherever your heart desires. <br><br>
+                                
+                                We love that you're free to stop to breathe in clean air, learn about cultures and taste local food when you travel by cabs. We love that these wholesome experiences make travelling better and enrich our lives. We live for the surprises we find on road trips. <br><br>
+                                
+                                No city is too big or too small. We know travellers and wanderers like us are everywhere. You live near Khajuraho, you live near Aleppey, and you live near Alibag and near Tranquebar. We want you to visit them all. Pack your bags every weekend and explore everything there is to see around you. <br><br>
+                                
+                                To make planning your vacation easier, you can book a cab with ease on our website, or call us on <span class="text-purple font-bold">9045450000</span> if you'd like to discuss your itinerary with our executives in detail. When you book an outstation cab with us, we'll send you a travel kit and help you plan your itinerary. We also have a handy cab booking app that will further reduce the hassles of booking a trip with us. Our expert drivers will guide you through some of the best experiences India has to offer. From the time you make a booking with us, to the time you get back home, we'll make sure you have a great road trip.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white flex justify-center items-center">
+                <div class="bg-white text-white text-center p-6 rounded-lg">
+
+                    <div class="p-5 flex flex-col items-center justify-between flex-flow max-w-6xl">
+                        
+                        <div>
+                            <h1 class="text-3xl font-bold text-purple mb-4"> No matter where you travel - we've got a cab for you</h1>
+                            <p class="font-normal text-black text-justify space-y-4">
+                                Planning a weekend getaway? Our outstation cab services will help you explore the best destinations, visit all the must-see places and taste the best local food. Did you just land at an airport or railway station closest to your destination? No problem! You can use our airport taxi, the transit pick up service to cover the last mile. We'll get you to your destination and show you some of the best sights along the way. Planning on traveling home for a family get-together? Try our newly introduced one-way cab services - no matter where you live, get dropped to your hometown by paying only one-side fare. Decided to take a personal day and spend the whole day exploring your city? Our local taxi packages will help you explore the best places to eat and drink at, some of the city's majestic monuments, greenest parks and oldest temples. You'll never have to worry about an empty travel itinerary again. Are you an offbeat traveller? Do you just hit the road and decide to take it from there? We offer one-way drops on several routes, in case you only want to be dropped to a destination and don't want to look back.
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+              
+            
+        </section>
+
+
+        <!-- footer -->
+
+        <section class="footer">
+            <div class="bg-purple w-full h-full flex flex-col items-center justify-center">
+                <div
+                    class="grid grid-cols-1 text-sm md:grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 p-4 mt-6 mb-6 max-w-screen-lg items-center justify-center">
+                    <div class="text-white font-medium flex flex-col items-center justify-center mx-9 space-y-2">
+                        <h3 class="font-bold mb-2">COMPANY</h3>
+                        <a href="#">About Us</a>
+                        <a href="#">Media Coverage</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                    </div>
+                    <div class="text-white font-medium flex flex-col items-center justify-center space-y-2">
+                        <h3 class="text-white font-bold mb-2">SERVICES</h3>
+                        <a href="#">About Us</a>
+                        <a href="#">Media Coverage</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                    </div>
+                    <div class="text-white font-medium flex flex-col items-center justify-center space-y-2">
+                        <h3 class="text-white font-bold mb-2">GET IN TOUCH</h3>
+                        <a href="#">About Us</a>
+                        <a href="#">Media Coverage</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                    </div>
+                </div>
+
+                <!-- <div class="text-white text-sm flex mb-6 font-bold items-center max-w-6xl justify-center text-center space-x-6">
+                    <img src="icons8-whatsapp.svg" class="text-white" fill="currentColor" alt="">
+                    <img src="icons8-facebook (1).svg" alt="">
+                    <img src="icons8-instagram.svg" alt="">
+                    <img src="icons8-twitter-bird.svg" alt="">
+                </div> -->
+
+                <div class="text-white text-sm flex mb-6 font-bold items-center max-w-6xl justify-center text-center">
+                    <p>&copy; 2025 Rental Cabs</p>
+                </div>
+
+
+            </div>
+        </section>
+
+
+    </div>
+
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const oneWaybtn = document.getElementById("oneWay-btn");
+            const twoWaybtn = document.getElementById("twoWay-btn");
+            const oneWayForm = document.getElementById("oneWayForm");
+            const twoWayForm = document.getElementById("twoWayForm");
+
+            oneWaybtn.classList.add('bg-purple');
+            oneWaybtn.classList.add('text-white');
+
+            // Event Listeners for Toggle
+            oneWaybtn.addEventListener("click", () => {
+                oneWaybtn.classList.add("bg-purple");
+                twoWaybtn.classList.remove("bg-purple");
+                oneWaybtn.classList.add("text-white");
+                twoWaybtn.classList.remove("text-white");
+                // twoWaybtn.classList.add("bg-gray-300");
+                twoWaybtn.classList.add("text-black");
+                twoWayForm.classList.add("hidden");
+                oneWayForm.classList.remove("hidden");
+            });
+
+            twoWaybtn.addEventListener("click", () => {
+                twoWaybtn.classList.add("bg-purple");
+                oneWaybtn.classList.remove("bg-purple");
+                twoWaybtn.classList.add("text-white");
+                oneWaybtn.classList.remove("text-white");
+                // oneWaybtn.classList.add("bg-gray-300");
+                oneWaybtn.classList.add("text-black");
+                oneWayForm.classList.add("hidden");
+                twoWayForm.classList.remove("hidden");
+            });
+        });
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+
+                        // Add your custom color
+
+                        purple: '#736CED',
+                        purplelg: '#9F9FED',
+                        purplePink: '#D4C1EC',
+                        purpleWhite: '#FEF9FF',
+                        brownPink: '#F2DFD7',
+                    },
+
+                    fontfamily: {
+                        cinzel: ["Cinzel", 'serif'],
+                    }
+
+                },
+            },
+        };
+    </script>
+
+
+</body>
+
+</html>
