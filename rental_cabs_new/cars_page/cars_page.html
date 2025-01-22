@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+        <style>
+            .bg-opacity-low::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(255, 255, 255, 0.9);
+                /* Adjust opacity here (0 to 1) */
+                z-index: -1;
+            }
+        </style>
+</head>
+
+<body class="relative bg-fixed bg-cover bg-center bg-no-repeat bg-opacity-low"
+style="background-image: url('./../bg_svg.jpg'); ">
+    <!-- Header -->
+    <header class="bg-white shadow-lg ">
+        <div
+            class="container max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center p-4 space-y-4 md:space-y-0">
+
+            <!-- Logo and Brand Name -->
+            <div class="flex items-center md:ml-0">
+                <img src="./../undraw_building_burz.svg" alt="Brand Logo" class="h-8">
+                <span class="ml-3 text-lg font-bold text-gray-800">Rental Cabs</span>
+            </div>
+
+            <!-- Contact Number -->
+            <div class="flex items-center border border-purple rounded-lg overflow-hidden w-xl md:w-auto md:mr-0">
+                <!-- Icon and 24x7 -->
+                <div class="flex items-center bg-white px-3 py-2 w-xl md:w-auto">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-purple" height="24px" viewBox="0 -960 960 960"
+                        width="24px" fill="currentColor">
+                        <path
+                            d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
+                    </svg>
+                    <span class="ml-2 text-black font-medium">24x7</span>
+
+                </div>
+
+                <!-- Contact Number -->
+                <div class="bg-purple px-4 py-2 text-white font-bold w-full md:w-auto">
+                    <a href="tel:1234567890" class="block text-center md:text-left">
+                        090 4545 0000
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <h1 class="flex items-center justify-center font-bold text-4xl text-purple mt-6 p-4 text-center">Please Choose the Car !</h1>
+
+    <!-- trip details section -->
+    <section>
+        <div class="flex items-center justify-center mt-6">
+            <div
+                class="p-6 bg-white max-w-6xl shadow-xl font-bold flex-col items-center justify-between text-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 rounded-3xl">
+                <h1 class="max-w-23%">FROM : Bengalore</h1>
+                <h1 class="max-w-23%">TO : Mysore</h1>
+                <h1 class="col-3">TIME : 9:15 AM</h1>
+                <h1>DATE : 23/01/2025</h1>
+                <button class="bg-purple text-white p-2 rounded-xl">
+                    <a href="#">EDIT</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- car details section -->
+    <section>
+
+        <div class="flex items-center justify-center mt-6">
+            <div
+                class="p-6 bg-white max-w-4xl shadow-xl border font-bold flex-col items-center justify-between text-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 rounded-3xl">
+                <div>
+                    <img src="./icons/car.webp" class="w-[200px] h-[100px]" alt="">
+                    <h1>INNOAVA CRYSTA</h1>
+                </div>
+
+                <p>Top Rated Cabs</p>
+                <p>Inclusive with Toll Tax & GST</p>
+                <h1 class="text-purple text-2xl">₹2199</h1>
+                <div class="flex items-center justify-center">
+                    <button class="bg-purple text-white p-2 rounded-lg w-40">
+                        <a href="#">Select</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center mt-6">
+            <div
+                class="p-6 bg-white max-w-4xl shadow-xl border font-bold flex-col items-center justify-between text-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 rounded-3xl">
+                <div class="">
+                    <img src="./icons/car.webp" class="w-[200px] h-[100px]" alt="">
+                    <h1>SWIFT DZIRE</h1>
+                </div>
+
+                <p>Top Rated Cabs</p>
+                <p>Inclusive with Toll Tax & GST</p>
+                <h1 class="text-purple text-2xl">₹2059</h1>
+                <div class="flex items-center justify-center">
+                    <button class="bg-purple text-white p-2 rounded-lg w-40">
+                        <a href="#">Select</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center mt-6 mb-12">
+            <div
+                class="p-6 bg-white max-w-4xl shadow-xl border font-bold flex-col items-center justify-between text-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 rounded-3xl">
+                <div class="">
+                    <img src="./icons/car.webp" class="w-[200px] h-[100px]" alt="">
+                    <h1>HONDA CIVIC</h1>
+                </div>
+
+                <p>Top Rated Cabs</p>
+                <p>Inclusive with Toll Tax & GST</p>
+                <h1 class="text-purple text-2xl">₹3599</h1>
+                <div class="flex items-center justify-center">
+                    <button class="bg-purple text-white p-2 rounded-lg w-40">
+                        <a href="#">Select</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="bg-purple w-full h-full flex flex-col items-center justify-center">
+            <div
+                class="grid grid-cols-1 text-sm md:grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 p-4 mt-6 mb-6 max-w-screen-lg items-center justify-center">
+                <div class="text-white font-medium flex flex-col items-center justify-center mx-9 space-y-2">
+                    <h3 class="font-bold mb-2">COMPANY</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Media Coverage</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <div class="text-white font-medium flex flex-col items-center justify-center space-y-2">
+                    <h3 class="text-white font-bold mb-2">SERVICES</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Media Coverage</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <div class="text-white font-medium flex flex-col items-center justify-center space-y-2">
+                    <h3 class="text-white font-bold mb-2">GET IN TOUCH</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Media Coverage</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+
+            <!-- <div class="text-white text-sm flex mb-6 font-bold items-center max-w-6xl justify-center text-center space-x-6">
+                <img src="icons8-whatsapp.svg" class="text-white" fill="currentColor" alt="">
+                <img src="icons8-facebook (1).svg" alt="">
+                <img src="icons8-instagram.svg" alt="">
+                <img src="icons8-twitter-bird.svg" alt="">
+            </div> -->
+
+            <div class="text-white text-sm flex mb-6 font-normal items-center max-w-6xl justify-center text-center">
+                <p>&copy; 2025 Rental Cabs | *T&C</p>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+
+                        // Add your custom color
+
+                        purple: '#736CED',
+                        purplelg: '#9F9FED',
+                        purplePink: '#D4C1EC',
+                        purpleWhite: '#FEF9FF',
+                        brownPink: '#F2DFD7',
+                    },
+
+                    fontfamily: {
+                        cinzel: ["Cinzel", 'serif'],
+                    }
+
+                },
+            },
+        };
+    </script>
+</body>
+
+</html>
