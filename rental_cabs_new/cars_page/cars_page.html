@@ -12,23 +12,23 @@
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-        <style>
-            .bg-opacity-low::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(255, 255, 255, 0.9);
-                /* Adjust opacity here (0 to 1) */
-                z-index: -1;
-            }
-        </style>
+    <style>
+        .bg-opacity-low::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            /* Adjust opacity here (0 to 1) */
+            z-index: -1;
+        }
+    </style>
 </head>
 
 <body class="relative bg-fixed bg-cover bg-center bg-no-repeat bg-opacity-low"
-style="background-image: url('./../bg_svg.jpg'); ">
+    style="background-image: url('./../bg_svg.jpg'); ">
     <!-- Header -->
     <header class="bg-white shadow-lg ">
         <div
@@ -64,20 +64,24 @@ style="background-image: url('./../bg_svg.jpg'); ">
         </div>
     </header>
 
-    <h1 class="flex items-center justify-center font-bold text-4xl text-purple mt-6 p-4 text-center">Please Choose the Car !</h1>
+    <h1 class="flex items-center justify-center font-bold text-4xl text-purple mt-6 p-4 text-center">Please Choose the
+        Car !</h1>
 
     <!-- trip details section -->
     <section>
-        <div class="flex items-center justify-center mt-6">
-            <div
-                class="p-6 bg-white max-w-6xl shadow-xl font-bold flex-col items-center justify-between text-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 rounded-3xl">
-                <h1 class="max-w-23%">FROM : Bengalore</h1>
-                <h1 class="max-w-23%">TO : Mysore</h1>
-                <h1 class="col-3">TIME : 9:15 AM</h1>
-                <h1>DATE : 23/01/2025</h1>
-                <button class="bg-purple text-white p-2 rounded-xl">
-                    <a href="#">EDIT</a>
-                </button>
+        <div class="flex items-center justify-center mt-2">
+            <div class="grid grid-flow-row-dense grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 p-6 bg-white max-w-5xl shadow-xl font-bold flex-col items-center justify-center text-center gap-4 rounded-3xl">
+                <div class="grid col-span-2 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 flex-grow">
+                    <h1 class="max-w-23%">FROM : Bengalore</h1>
+                    <h1 class="max-w-23%">TO : Mysore</h1>
+                    <h1 class="col-3">TIME : 9:15 AM</h1>
+                    <h1>DATE : 23/01/2025</h1>
+                </div>
+                <div class="justify-center items-center flex flex-col">
+                    <button class="bg-purple text-white p-2 rounded-xl w-20 items-center justify-center">
+                        <a href="#">EDIT</a>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -85,60 +89,152 @@ style="background-image: url('./../bg_svg.jpg'); ">
     <!-- car details section -->
     <section>
 
-        <div class="flex items-center justify-center mt-6">
-            <div
-                class="p-6 bg-white max-w-4xl shadow-xl border font-bold flex-col items-center justify-between text-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 rounded-3xl">
-                <div>
-                    <img src="./icons/car.webp" class="w-[200px] h-[100px]" alt="">
-                    <h1>INNOAVA CRYSTA</h1>
+        <div class="flex items-center justify-center m-10">
+
+            <div class="border border-purple max-w-5xl rounded-3xl bg-white">
+                <div
+                    class="max-w-5xl grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 p-4 justify-center items-center bg-white rounded-3xl font-bold text-center">
+                    <div class="flex items-center justify-center flex-col">
+                        <img src="./icons/car.webp" class="w-[200px] h-[100px] " alt="">
+                        <h1 class="text-center">INNOAVA CRYSTA</h1>
+                    </div>
+
+                    <div class="flex items-center justify-center flex-col">
+                        <img src="./icons/badge-svgrepo-com.svg" class="w-10 h-10 mb-2" alt="">
+                        <p class=" text-sm">Top Rated Cabs</p>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="./icons/bill-finance-business-money-financial-banking-cash-svgrepo-com.svg"
+                            class="w-9 h-9 mb-2" alt="">
+                        <p class="text-sm">Inclusive Toll Tax & GST</p>
+                    </div>
+
+                    <h1 class="text-purple text-2xl text-center">₹2199</h1>
+
+                    <div class="flex items-center justify-center flex-col">
+                        <button class="bg-purple text-white p-2 rounded-lg w-40">
+                            <a href="#">Select</a>
+                        </button>
+                        <button onclick="document.getElementById('detailsContent').classList.toggle('hidden')"
+                            class="mt-2">
+                            <a href="#" class="text-sm text-purple underline">Details</a>
+                        </button>
+                    </div>
                 </div>
 
-                <p>Top Rated Cabs</p>
-                <p>Inclusive with Toll Tax & GST</p>
-                <h1 class="text-purple text-2xl">₹2199</h1>
-                <div class="flex items-center justify-center">
-                    <button class="bg-purple text-white p-2 rounded-lg w-40">
-                        <a href="#">Select</a>
-                    </button>
-                </div>
-            </div>
-        </div>
+                <!-- this is toggle section data -->
+                <div id="detailsContent" class="hidden flex items-center justify-center rounded-3xl bg-white mb-2">
+                    <div class="grid grid-cols-1 justify-center items-center max-w-5xl px-4">
+                        <div
+                            class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 border border-purple text-center max-w-5xl sm:max-w-23% justify-center items-center rounded divide-x divide-purple font-bold text-sm text-gray-400 bg-white">
+                            <button id="inclusion" 
+                                class="active px-2 py-1 cursor-pointer text-center">INCLUSION</button>
+                            <button id="exclusion" class="px-2 py-1 cursor-pointer text-center">EXCLUSION</button>
+                            <button id="facilities" class="px-2 py-1 cursor-pointer text-center">FACILITIES</button>
+                            <button id="tc" class="px-2 py-1 cursor-pointer text-center">T&C</button>
+                        </div>
 
-        <div class="flex items-center justify-center mt-6">
-            <div
-                class="p-6 bg-white max-w-4xl shadow-xl border font-bold flex-col items-center justify-between text-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 rounded-3xl">
-                <div class="">
-                    <img src="./icons/car.webp" class="w-[200px] h-[100px]" alt="">
-                    <h1>SWIFT DZIRE</h1>
+
+                        <!-- details toggle button section -->
+
+                        <!-- inclusion button content -->
+                        <div id="inclusionContent"
+                            class="hidden flex flex-col items-center justify-center rounded-3xl max-w-5xl">
+                            <div
+                                class="grid grid-cols-2 text-sm md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-2 max-w-5xl items-center justify-center flex-flow">
+                                <div
+                                    class="text-center p-2 rounded-lg bg-white flex flex-col justify-center items-center">
+                                    <img src="./icons/fuel-14-svgrepo-com.svg" class="w-8 h-8 mb-2" alt="">
+                                    <p class="text-xs">Base Fare for 245 KM</p>
+                                </div>
+                                <div
+                                    class="text-center p-2 rounded-lg bg-white flex flex-col justify-center items-center">
+                                    <img src="./icons/captain-svgrepo-com.svg" class="w-8 h-8 mb-2" alt="">
+                                    <p class="text-xs">Driver Allowance</p>
+                                </div>
+                                <div
+                                    class="text-center p-2 rounded-lg bg-white flex flex-col justify-center items-center">
+                                    <img src="./icons/money-cash-svgrepo-com.svg" class="mb-2" alt="">
+                                    <p class="text-xs">State Tax & Toll</p>
+                                </div>
+                                <div
+                                    class="text-center p-2 rounded-lg bg-white flex flex-col justify-center items-center">
+                                    <img src="./icons/bill-receipt-svgrepo-com.svg" class="w-6 h-6 mb-2" alt="">
+                                    <p class="text-xs">GST</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- exclusion button content -->
+                        <div id="exclusionContent"
+                            class="hidden flex flex-col items-center justify-center rounded-3xl max-w-5xl">
+                            <div
+                                class="grid grid-cols-2 text-sm md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-2 max-w-5xl items-center justify-center flex-flow">
+                                <div
+                                    class="text-center p-2 rounded-lg bg-white flex flex-col justify-center items-center">
+                                    <img src="./icons/money-cash-svgrepo-com.svg" class="w-8 h-8 mb-2" alt="">
+                                    <p class="text-xs">Pay ₹12.75/km after 257 km</p>
+                                </div>
+                                <div
+                                    class="text-center p-2 rounded-lg bg-white flex flex-col justify-center items-center">
+                                    <img src="./icons/car-hatchback-svgrepo-com.svg" class="w-8 h-8 mb-2" alt="">
+                                    <p class="text-xs">Multiple PickUp & Drops</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- facilities toggle button content -->
+                        <div id="facilitiesContent"
+                            class="hidden flex flex-col items-center justify-center rounded-3xl max-w-5xl">
+                            <div
+                                class="grid grid-cols-2 text-sm md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-2 max-w-5xl items-center justify-center flex-flow">
+                                <div
+                                    class="text-center p-2 rounded-lg bg-white flex flex-col justify-center items-center">
+                                    <img src="./icons/seat-pictogram-2-svgrepo-com.svg" class="w-8 h-8 mb-2" alt="">
+                                    <p class="text-xs">4 Seater</p>
+                                </div>
+                                <div
+                                    class="text-center p-2 rounded-lg bg-white flex flex-col justify-center items-center">
+                                    <img src="./icons/luggage-svgrepo-com.svg" class="w-8 h-8 mb-2" alt="">
+                                    <p class="text-xs">2 Bags</p>
+                                </div>
+                                <div
+                                    class="text-center p-2 rounded-lg bg-white flex flex-col justify-center items-center">
+                                    <img src="./icons/ac-temperature-room-svgrepo-com.svg" class="w-8 h-8 mb-2" alt="">
+                                    <p class="text-xs">AC</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- T & C toggle button content -->
+                        <div id="tcContent"
+                            class="hidden flex flex-col items-center justify-center rounded-3xl max-w-5xl px-6">
+                            <div
+                                class="text-sm p-2 max-w-5xl items-center justify-center flex-flow">
+                                <div
+                                    class="text-center p-2 rounded-lg bg-white flex flex-col justify-center items-center text-justify">
+                                    <ul class="list-disc">
+                                        <li>Your Trip has a KM limit. If your usage exceeds this limit, you will be
+                                            charged for the excess KM used.
+                                        </li>
+                                        <li>Your trip includes one pick up in Pick-up city and one drop to destination
+                                            city. It does not include within city travel.
+                                        </li>
+                                        <li>If your Trip has Hill climbs, cab AC may be switched off during such climbs.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
                 </div>
 
-                <p>Top Rated Cabs</p>
-                <p>Inclusive with Toll Tax & GST</p>
-                <h1 class="text-purple text-2xl">₹2059</h1>
-                <div class="flex items-center justify-center">
-                    <button class="bg-purple text-white p-2 rounded-lg w-40">
-                        <a href="#">Select</a>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="flex items-center justify-center mt-6 mb-12">
-            <div
-                class="p-6 bg-white max-w-4xl shadow-xl border font-bold flex-col items-center justify-between text-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 rounded-3xl">
-                <div class="">
-                    <img src="./icons/car.webp" class="w-[200px] h-[100px]" alt="">
-                    <h1>HONDA CIVIC</h1>
-                </div>
-
-                <p>Top Rated Cabs</p>
-                <p>Inclusive with Toll Tax & GST</p>
-                <h1 class="text-purple text-2xl">₹3599</h1>
-                <div class="flex items-center justify-center">
-                    <button class="bg-purple text-white p-2 rounded-lg w-40">
-                        <a href="#">Select</a>
-                    </button>
-                </div>
             </div>
         </div>
 
@@ -148,28 +244,27 @@ style="background-image: url('./../bg_svg.jpg'); ">
     <!-- footer -->
     <section class="footer">
         <div class="bg-purple w-full h-full flex flex-col items-center justify-center">
-            <div
-                class="grid grid-cols-1 text-sm md:grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 p-4 mt-6 mb-6 max-w-screen-lg items-center justify-center">
-                <div class="text-white font-medium flex flex-col items-center justify-center mx-9 space-y-2">
-                    <h3 class="font-bold mb-2">COMPANY</h3>
-                    <a href="#">About Us</a>
-                    <a href="#">Media Coverage</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
+            <div class="grid grid-cols-2 text-sm md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 space-x-6 gap-4 p-4 mt-6 mb-6 max-w-screen-lg items-center justify-center">
+                <div class="text-white font-medium flex flex-col items-center justify-center space-y-2 ">
+                    <h3 class="font-bold mb-2 text-black">COMPANY</h3>
+                    <a href="#" class="hover:text-black">About Us</a>
+                    <a href="#" class="hover:text-black">Media Coverage</a>
+                    <a href="#" class="hover:text-black">Privacy Policy</a>
+                    <a href="#" class="hover:text-black">Terms & Conditions</a>
                 </div>
                 <div class="text-white font-medium flex flex-col items-center justify-center space-y-2">
-                    <h3 class="text-white font-bold mb-2">SERVICES</h3>
-                    <a href="#">About Us</a>
-                    <a href="#">Media Coverage</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
+                    <h3 class="font-bold mb-2 text-black">SERVICES</h3>
+                    <a href="#" class="hover:text-black">About Us</a>
+                    <a href="#" class="hover:text-black">Media Coverage</a>
+                    <a href="#" class="hover:text-black">Privacy Policy</a>
+                    <a href="#" class="hover:text-black">Terms & Conditions</a>
                 </div>
                 <div class="text-white font-medium flex flex-col items-center justify-center space-y-2">
-                    <h3 class="text-white font-bold mb-2">GET IN TOUCH</h3>
-                    <a href="#">About Us</a>
-                    <a href="#">Media Coverage</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
+                    <h3 class="font-bold mb-2 text-black">GET IN TOUCH</h3>
+                    <a href="#" class="hover:text-black">About Us</a>
+                    <a href="#" class="hover:text-black">Media Coverage</a>
+                    <a href="#" class="hover:text-black">Privacy Policy</a>
+                    <a href="#" class="hover:text-black">Terms & Conditions</a>
                 </div>
             </div>
 
@@ -181,7 +276,7 @@ style="background-image: url('./../bg_svg.jpg'); ">
             </div> -->
 
             <div class="text-white text-sm flex mb-6 font-normal items-center max-w-6xl justify-center text-center">
-                <p>&copy; 2025 Rental Cabs | *T&C</p>
+                <p>&copy; 2025 Rental Cabs | <a href="#" class="hover:text-black">*T&C</a></p>
             </div>
 
 
@@ -191,6 +286,108 @@ style="background-image: url('./../bg_svg.jpg'); ">
 
 
     <script>
+
+        function toggleDetails() {
+            const details = document.getElementById('detailsContent');
+            if (details.style.maxHeight) {
+                details.style.maxHeight = null;
+            } else {
+                details.style.maxHeight = details.scrollHeight + "px";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const inclusionBtn = document.getElementById("inclusion");
+            const exclusionBtnv = document.getElementById("exclusion");
+            const facilitiesBtn = document.getElementById("facilities");
+            const tcBtn = document.getElementById("tc");
+
+            const inclusionContent = document.getElementById("inclusionContent");
+            const exclusionContent = document.getElementById("exclusionContent");
+            const facilitiesContent = document.getElementById("facilitiesContent");
+            const tcContent = document.getElementById("tcContent");
+
+
+            // default color when the details button is clicked 
+            inclusionBtn.classList.add('bg-purple')
+            inclusionBtn.classList.add("text-white");
+            inclusionContent.classList.remove('hidden');
+
+
+            // event listner of inclusion drop down toggle btn
+            inclusionBtn.addEventListener('click', () => {
+                inclusionBtn.classList.add('bg-purple');
+                inclusionBtn.classList.add('text-white');
+                exclusionBtnv.classList.remove('bg-purple');
+                exclusionBtnv.classList.remove('text-white');
+                facilitiesBtn.classList.remove('bg-purple');
+                facilitiesBtn.classList.remove('text-white');
+                tcBtn.classList.remove('bg-purple');
+                tcBtn.classList.remove('text-white');
+
+                inclusionContent.classList.remove('hidden');
+                exclusionContent.classList.add('hidden');
+                facilitiesContent.classList.add('hidden');
+                tcContent.classList.add('hidden');
+            })
+
+
+            // event Listner of dropdown toggle btn for exclusion button
+            exclusionBtnv.addEventListener("click", () => {
+                inclusionBtn.classList.remove('bg-purple');
+                inclusionBtn.classList.remove('text-white');
+                exclusionBtnv.classList.add('bg-purple');
+                exclusionBtnv.classList.add('text-white');
+                facilitiesBtn.classList.remove('bg-purple');
+                facilitiesBtn.classList.remove('text-white');
+                tcBtn.classList.remove('bg-purple');
+                tcBtn.classList.remove('text-white');
+
+                exclusionContent.classList.remove('hidden');
+                inclusionContent.classList.add('hidden');
+                facilitiesContent.classList.add('hidden');
+                tcContent.classList.add('hidden');
+            })
+
+
+            // event listner for drop down toggle btn of facilities
+            facilitiesBtn.addEventListener('click', () => {
+                facilitiesBtn.classList.add('bg-purple');
+                facilitiesBtn.classList.add('text-white');
+                inclusionBtn.classList.remove('bg-purple');
+                inclusionBtn.classList.remove('text-white');
+                exclusionBtnv.classList.remove('bg-purple');
+                exclusionBtnv.classList.remove('text-white');
+                tcBtn.classList.remove('bg-purple');
+                tcBtn.classList.remove('text-white');
+
+                facilitiesContent.classList.remove('hidden');
+                inclusionContent.classList.add('hidden');
+                exclusionContent.classList.add('hidden');
+                tcContent.classList.add('hidden');
+            })
+
+
+            //event listner for t&c btn in drop down toggle section
+            tcBtn.addEventListener('click', () => {
+                tcBtn.classList.add('bg-purple');
+                tcBtn.classList.add('text-white');
+                inclusionBtn.classList.remove('bg-purple');
+                inclusionBtn.classList.remove('text-white');
+                exclusionBtnv.classList.remove('bg-purple');
+                exclusionBtnv.classList.remove('text-white');
+                facilitiesBtn.classList.remove('bg-purple');
+                facilitiesBtn.classList.remove('text-white');
+
+                tcContent.classList.remove('hidden');
+                inclusionContent.classList.add('hidden');
+                exclusionContent.classList.add('hidden');
+                facilitiesContent.classList.add('hidden');
+            })
+
+
+        })
+
         tailwind.config = {
             theme: {
                 extend: {
@@ -212,6 +409,8 @@ style="background-image: url('./../bg_svg.jpg'); ">
                 },
             },
         };
+
+
     </script>
 </body>
 
